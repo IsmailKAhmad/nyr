@@ -1,0 +1,49 @@
+@import "variables";
+@import "fonts";
+@import "utils";
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background: $black;
+  font-family: 'nyr-text', Georgia, serif;
+}
+body {
+  background: $white;
+  color: $black;
+  margin: 0;
+  padding: 0;
+}
+
+
+.clickable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+h1 {
+  margin: 0;
+  font-weight: normal;
+}
+a,
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+}

@@ -1,0 +1,131 @@
+@import "global/variables";
+
+
+._HEADER {
+  &.header-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: $white;
+    box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.1);
+    .header {
+      margin: 0 auto;
+      position: relative;
+      height: 80px;
+      background: $white;
+      transition: 200ms linear all;
+      margin: 0 2rem;
+    }
+    .header-additional {
+      background: $black;
+      transition: 200ms linear all;
+      height: 40px;
+      .additional-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        .additional-link {
+          font-family: 'nyr-caps';
+          text-transform: uppercase;
+          letter-spacing: 0.02rem;
+          color: white;
+          padding: 0rem 1rem;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+  .logo-wrap {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    bottom: 10px;
+  }
+  .logo {
+    background-image: url('../../static/img/logo.png');
+    background-size: contain;
+    background-position: center left;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 100px;
+    transition: 200ms linear all;
+
+  }
+  .page-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50vw;
+    .page-title-inner {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: 200ms all 0ms;
+      opacity: 0;
+      transform: translate(0, 30px);
+      .title {
+        font-family: 'nyr-title';
+        font-style: italic;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    text-align: right;
+    padding-top: 28px;
+    transition: 200ms linear all;
+
+    &-inner {
+      border-bottom: 2px solid $black;
+      width: 2rem;
+      margin-left: auto;
+      margin-bottom: 10px;
+      transition: 200ms linear all;
+
+      &:nth-child(2) {
+        width: 2.5rem;
+      }
+    }
+  }
+}
+
+body.scrolled ._HEADER {
+  .header {
+    height: 60px;
+    overflow: hidden;
+  }
+  .header-additional {
+    height: 0;
+    opacity: 0;
+  }
+  .logo {
+    height: 40px;
+  }
+  .page-title-inner {
+    opacity: 1;
+    transform: translate(0,0);
+    transition: 200ms all 0ms;
+  }
+  .hamburger {
+    padding-top: 18px;
+    .hamburger-inner {
+      width: 1.6rem;
+      &:nth-child(2) {
+        width: 2rem;
+      }
+    }
+  }
+}

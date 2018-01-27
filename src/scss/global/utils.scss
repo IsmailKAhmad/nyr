@@ -1,0 +1,94 @@
+
+$column: 6.25vw;
+
+
+@for $col from 1 through 16 {
+  .w#{$col} {
+    width: $col * $column;
+  }
+}
+
+$breakpoints: 384 512 640 768 896 1024 1152 1280 1408 1536 1728 1920;
+$scale: 0.8;
+$base: 20;
+$mobile: 896px;
+html {
+  font-size: $base + px;
+}
+
+@each $breakpoint in $breakpoints {
+  $i: index($breakpoints, $breakpoint);
+  $j: if($breakpoint > 768, 1536, 1024);
+  @media screen and (min-width: $breakpoint + px) {
+    html {
+      font-size: ($base * ($scale + ($breakpoint - 384)/($j - 384) * (1 - $scale))) + px;
+    }
+  }
+}
+
+$scale: 0.6;
+@each $breakpoint in $breakpoints {
+  $i: index($breakpoints, $breakpoint);
+  $j: if($breakpoint > 768, 1536, 1024);
+  @media screen and (min-width: $breakpoint + px) {
+    ._l {
+      font-size: ($base * ($scale + ($breakpoint - 384)/($j - 384) * (1 - $scale))) + px;
+    }
+  }
+}
+
+$scale: 0.4;
+@each $breakpoint in $breakpoints {
+  $i: index($breakpoints, $breakpoint);
+  $j: if($breakpoint > 768, 1536, 1024);
+  @media screen and (min-width: $breakpoint + px) {
+    ._e {
+      font-size: ($base * ($scale + ($breakpoint - 384)/($j - 384) * (1 - $scale))) + px;
+    }
+  }
+}
+
+
+
+.mobile-only {
+  display: block;
+}
+.desktop-only {
+  display: none;
+}
+@media screen and (min-width: $mobile) {
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+}
+
+
+.panes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (min-width: $mobile) {
+    flex-direction: row;
+  }
+  & > .pane {
+    width: 100%;
+    @media screen and (min-width: $mobile) {
+      width: 50%;
+    }
+  }
+}
+
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  & > .pane {
+    width: 50%;
+  }
+}

@@ -1,0 +1,197 @@
+@import "global/variables";
+
+.article-wrap {
+  p {
+    text-indent: 1em;
+    line-height: 1.55em;
+    font-size: inherit;
+    margin-top: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 1.12rem;
+  }
+  p:first-child {
+    text-indent: 0em;
+  }
+
+  .image {
+    // background-image: url('../assets/img/ladybird.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2rem auto;
+    height: 30vh;
+    width: 100%;
+    @media screen and (min-width: $mobile) {
+      width: $column * 9;
+      height: 28rem;
+      margin-left: -0.25 * $column;
+
+    }
+  }
+
+  .category,
+  .article-date {
+    font-family: 'nyr-caps';
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    color: $black;;
+    margin: 1rem 0;
+    padding: 0.2rem 0;
+    display: inline-block;
+    // border-bottom: 2 px solid $black;
+  }
+  .article-date {
+    float: right;
+    border-bottom: 0;
+  }
+  .article {
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    width: $column * 14;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    @media screen and (min-width: $mobile) {
+      width: $column * 12;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .article-header {
+    position: relative;
+  }
+  .article-footer {
+    position: relative;
+    .first-pane {
+      text-align: right;
+    }
+  }
+  .article-title-divider {
+    height: 4rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(10deg);
+    border-right: 2px solid $black;
+  }
+  .title-wrap {
+    padding-right: 0.5* $column;
+    margin: 1rem 0;
+  }
+  .title {
+    font-family: 'nyr-title';
+    font-size: 4em;
+    margin: 1rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    display: inline;
+  }
+  .meta {
+    line-height: 1.55em;
+    font-size: 1.12rem;
+    @media screen and (min-width: $mobile) {
+      padding-left: $column;
+    }
+  }
+
+  .content  {
+    padding-top: 3rem;
+    max-width: 44rem;
+    position: relative;
+    margin: 0 auto;
+    @media screen and (min-width: $mobile) {
+      // width: $column * 6;
+      max-width: 34rem;
+
+      padding-left: 2*$column;
+      padding-right: 2*$column ;
+    }
+  }
+  .content-wrap {
+    position: relative;
+  }
+}
+
+
+.sidebar-container {
+  position: absolute;
+  left: 0;
+  top: 0rem;
+  height: 10rem;
+  // background: red;
+  width: 2.5* $column;
+  padding-top: 3rem;
+
+  .author {
+    line-height: 1.55em;
+    font-size: 1.12rem;
+  }
+  .share-container {
+    margin: 1rem 0 1rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    .subscribe-title {
+      font-family: 'nyr-caps';
+      text-transform: uppercase;
+      letter-spacing: 0.02rem;
+      color: $black;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1rem;
+    }
+  }
+  .subscribe {
+    border: 1px solid $black;
+    margin: 3rem 0 1rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    border-bottom: 12px solid $black;
+    .subscribe-title {
+      font-family: 'nyr-caps';
+      text-transform: uppercase;
+      letter-spacing: 0.02rem;
+      color: $black;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1rem;
+    }
+    .subscribe-text {
+      line-height: 1.2em;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+
+    }
+    .subscribe-input-wrap {
+      margin: 0 -1rem;
+
+      input {
+        width: 100%;
+        padding: 0.6rem 1rem 0.4rem;
+        box-sizing: border-box;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-top: 1px dashed $black;
+        border-bottom: 1px solid $black;
+
+        font-family: 'nyr-text';
+
+      }
+    }
+
+  }
+
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0!important;
+  width: 0!important;
+  margin: 0!important;
+  padding: 0!important;
+  position: absolute;
+}
