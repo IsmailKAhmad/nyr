@@ -1,8 +1,7 @@
 import React from 'react';
-import cssModules from 'react-css-modules';
 import Content from '../components/Content';
 
-import styles from '../scss/BlogPost.module.scss';
+import '../scss/BlogPost.module.scss';
 
 const BlogPostTemplate = ({
   content, contentComponent, description, title, helmet,

@@ -1,3 +1,4 @@
+
 $column: 6.25vw;
 $mobile: 896px;
 $white: #fffeff;
@@ -6,3 +7,69 @@ $black: #22200e;
 
 $main: #2d0fdd;
 $second: #88ccdd;
+
+
+@mixin caps($size, $weight: bold) {
+  font-family: 'nyr-caps';
+  font-weight: $weight;
+  text-transform: uppercase;
+  @if $size == 's' {
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: 0.1rem;
+  }
+  @if $size == 'm' {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: 0.1rem;
+
+  }
+  @if $size == 'l' {
+    font-size: 4rem;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+
+  }
+}
+@mixin title($size, $weight: bold) {
+  font-family: 'nyr-title';
+  font-weight: $weight;
+  @if $size == 's' {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+  @if $size == 'm' {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  @if $size == 'l' {
+    font-family: 'nyr-title';
+    font-size: 4rem;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+}
+
+
+@mixin text($size, $weight: normal, $style: normal) {
+  font-family: 'nyr-text';
+  font-weight: $weight;
+  font-style: $style;
+  @if $size == 'xs' {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  @if $size == 's' {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+  @if $size == 'm' {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  @if $size == 'l' {
+    font-size: 28px;
+    letter-spacing: -0.3px;
+    line-height: 36px;
+  }
+}

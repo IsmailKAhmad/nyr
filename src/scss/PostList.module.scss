@@ -1,0 +1,19 @@
+@import "global/variables";
+
+.container {
+  color: $black;
+  .content {
+    color: $black;
+  }
+  .post-list-title {
+    @include caps('m');
+    padding: 2rem;
+    
+  }
+  .post-list-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+  }
+}

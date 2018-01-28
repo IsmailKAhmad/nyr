@@ -25,7 +25,8 @@
     "jsx-a11y/href-no-hash": "off",
     "react/prefer-stateless-function": "off",
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "off"
   },
   "settings": {
     "import/resolver": {

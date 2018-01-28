@@ -1,0 +1,49 @@
+@import "global/variables";
+
+.wrap {
+  box-sizing: border-box;
+  flex: 1 1 50%;
+  padding: 1.5rem;
+
+  .listed-post {
+    border: 2px solid $black;
+    padding: 1.5rem;
+    position: relative;
+    padding-bottom: 3rem;
+
+    .title {
+      color: black;
+      @include caps('m');
+    }
+
+    .date {
+      color: $black;
+      padding: 1rem 0;
+      @include text('s');
+
+    }
+
+    .excerpt {
+      color: $black;
+      text-align: justify;
+      @include text('s');
+
+    }
+
+    .readmore {
+      @include caps('s');
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: $main;
+      border-top: 2px solid $black;
+      border-left: 2px solid $black;
+      .readmore-inner {
+        color: $white;
+        padding: 0.4rem 1rem;
+
+      }
+    }
+
+  }
+}
